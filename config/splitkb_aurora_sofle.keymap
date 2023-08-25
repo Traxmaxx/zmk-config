@@ -31,8 +31,8 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <10>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <100>;
+            flavor = "balanced";
             hold-trigger-key-positions = <36>;
         };
     };
