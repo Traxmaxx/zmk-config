@@ -26,12 +26,10 @@
         esc_hold_shift: esc_hold_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "ESC_HOLD_SHIFT";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <800>;
             flavor = "balanced";
             hold-trigger-key-positions = <36>;
         };
@@ -49,11 +47,11 @@
             //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
 
             bindings = <
-                        &kp GRAVE  &kp N1     &kp N2    &kp N3    &kp N4  &kp N5                               &kp N6  &kp N7     &kp N8    &kp N9    &kp N0      &kp EQUAL
-                          &kp TAB   &kp Q      &kp W     &kp E     &kp R   &kp T                                &kp Y   &kp U      &kp I     &kp O     &kp P      &kp MINUS
-                   &kp LEFT_SHIFT   &kp A      &kp S     &kp D     &kp F   &kp G                                &kp H   &kp J      &kp K     &kp L  &kp SEMI        &kp SQT
-&esc_hold_shift LEFT_SHIFT ESCAPE   &kp Z      &kp X     &kp C     &kp V   &kp B     &trans        &kp F12      &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSLASH
-                                           &kp LCTRL  &kp LALT  &kp LGUI   &mo 1  &kp ENTER  &kp BACKSPACE  &kp SPACE   &mo 2   &kp RGUI  &kp RALT
+&kp GRAVE                          &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                            &kp N6     &kp N7  &kp N8     &kp N9    &kp N0    &kp EQUAL
+&kp TAB                            &kp Q   &kp W      &kp E     &kp R     &kp T                             &kp Y      &kp U   &kp I      &kp O     &kp P     &kp MINUS
+&kp LEFT_SHIFT                     &kp A   &kp S      &kp D     &kp F     &kp G                             &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&esc_hold_shift LEFT_SHIFT ESCAPE  &kp Z   &kp X      &kp C     &kp V     &kp B   &trans     &kp F12        &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp BACKSLASH
+                                           &kp LCTRL  &kp LALT  &kp LGUI  &mo 1   &kp ENTER  &kp BACKSPACE  &kp SPACE  &mo 2   &kp RGUI   &kp RALT
             >;
 
             sensor-bindings =
@@ -70,11 +68,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-       &bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &none           &none         &none  &kp LEFT_BRACE  &kp RIGHT_BRACE   &none
-&ext_power EP_OFF  &ext_power EP_ON  &ext_power EP_TOG         &none         &none         &none                      &trans          &trans  &kp UP_ARROW          &trans           &trans  &trans
-           &trans            &trans             &trans        &trans        &trans        &trans                      &trans  &kp LEFT_ARROW      &kp DOWN       &kp RIGHT           &trans  &trans
-           &trans            &trans             &trans        &trans        &trans        &trans  &trans      &trans  &trans          &trans        &trans          &trans           &trans  &trans
-                                                &trans        &trans        &trans        &trans   &none  &kp DELETE   &none           &none        &trans          &trans
+&bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &none   &none           &none         &kp LEFT_BRACE  &kp RIGHT_BRACE  &none
+&ext_power EP_OFF  &ext_power EP_ON  &ext_power EP_TOG  &none         &none         &none                             &trans  &trans          &kp UP_ARROW  &trans          &trans           &trans
+&trans             &trans            &trans             &trans        &trans        &trans                            &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT       &trans           &trans
+&trans             &trans            &trans             &trans        &trans        &trans        &trans  &trans      &trans  &trans          &trans        &trans          &trans           &trans
+                                     &trans             &trans        &trans        &trans        &none   &kp DELETE  &none   &none           &trans        &trans
             >;
         };
 
@@ -87,11 +85,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
- &none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6    &kp F7        &kp F8  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans                   &none     &none  &kp UP_ARROW             &none              &none    &none
-&trans  &trans  &trans  &trans  &trans  &trans                   &none  &kp LEFT      &kp DOWN         &kp RIGHT              &none    &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans            &trans             &trans   &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans            &trans
+&none   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7    &kp F8        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans                  &none   &none     &kp UP_ARROW  &none             &none              &none
+&trans  &trans  &trans  &trans  &trans  &trans                  &none   &kp LEFT  &kp DOWN      &kp RIGHT         &none              &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans            &trans             &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans
             >;
         };
     };
