@@ -1,4 +1,4 @@
-# Config Aurora Sofle v2 PCB Kit 
+# Config Aurora Sofle v2 PCB Kit
 
 ![ABFEECCD-25C7-4F1B-B112-243E7AD99D48_1_102_a](https://github.com/Traxmaxx/zmk-config/assets/320272/235f34a0-26d6-4285-a514-ffe47be3d2c8)
 
